@@ -28,7 +28,7 @@ while True:
     html = BeautifulSoup(res.text, "html.parser")
     carreras = html.find_all("label", { "class": "text-red" })
 
-    if 'carreras' in entrada.lower() in entrada.lower():
+    if 'carreras' in entrada.lower():
         gTTS(f'Hay {len(carreras)} carreras', lang='es').save(f'carreras{i}.mp3')
         playsound(f'carreras{i}.mp3')
 
